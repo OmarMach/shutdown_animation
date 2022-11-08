@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -78,6 +80,12 @@ class _ShutDownAnimationScreenState extends State<ShutDownAnimationScreen> with 
                       Icon(
                         Icons.power_settings_new_rounded,
                         size: 100,
+                        shadows: <Shadow>[
+                          Shadow(
+                            color: neonGreen.withOpacity(animation.value),
+                            blurRadius: animation.value * 200.0,
+                          ),
+                        ],
                         color: neonGreen.withOpacity(animation.value),
                       ),
                       Row(
